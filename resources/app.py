@@ -67,7 +67,7 @@ def index():
 def history():
 	conn = mysql.connect()
 	cursor = conn.cursor()
-	cursor.execute('''SELECT * FROM p2db.record''')
+	cursor.execute('''SELECT * FROM p2db.records''')
 	results = cursor.fetchall()
 	return render_template('history.html', title='Stored Runs', results = results)
 
