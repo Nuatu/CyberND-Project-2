@@ -59,7 +59,7 @@ END//"
 
 # Create user for servers with limited access
 mysql -h database -u serverAdmin -p$DB -e "CREATE USER 'server'@'%' IDENTIFIED BY 'server_password';"
-mysql -h database -u serverAdmin -p$DB -e "GRANT SELECT,INSERT,UPDATE ON p2db.records TO 'server'@'%'"
+mysql -h database -u serverAdmin -p$DB -e "GRANT SELECT,INSERT,UPDATE ON p2db.records TO 'server'@'%';"
 mysql -h database -u serverAdmin -p$DB -e "GRANT EXECUTE ON p2db.* TO 'server'@'%';"
 
 # Unset DB password
